@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -42,9 +44,10 @@ export class AppComponent {
   };
   getOrders: any;
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private router: Router){}
 
   async ngOnInit(){
+    this.router.navigate(['/main-page'])
     this.getOrders = (await this.http.get('http://localhost:3000/api/getOrders').toPromise()) as any[];
     this.dataSource = this.getOrders;
     console.log(this.dataSource);  
@@ -82,4 +85,6 @@ export class AppComponent {
     this.http.post('http://localhost:3000/api/deleteOrder', {orders: this.orders}).toPromise();
     // this.orders = record;
   }
+
+
 }

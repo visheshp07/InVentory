@@ -1,18 +1,15 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="background:#067a40!important">
     <span>Application Title</span>
-    <!-- <span class="example-fill-remaining-space"></span>
-    <span>Home</span>
-    <span>About</span>
-    <span>Contact</span> -->
     <!-- <span class="example-fill-remaining-space"></span>
     <span>Home</span>
     <span>About</span>
     <span>Contact</span> -->
 </mat-toolbar>
 
-<mat-card>
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
+
+<!-- <mat-card>
+  <form class="example-form"> -->
+    <!-- <mat-form-field class="example-full-width">
       <input matInput name="companyName" [(ngModel)]="orders.companyName" placeholder="Company Name">
     </mat-form-field>
     <mat-form-field class="example-full-width">
@@ -41,11 +38,24 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <input matInput name="location" [(ngModel)]="orders.location" placeholder="Location">
-    </mat-form-field>
+    </mat-form-field> -->
 
     <!-- <button (click)="post()" mat-button>Submit Order</button> -->
+    <!-- <mat-grid-list cols="2" rowHeight="10:1">
+      <mat-grid-tile>
+        <mat-form-field appearance="fill" style="background-color: white!important">
+          <input matInput placeholder="Simple placeholder" required>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button (click)="post()" routerLink="/main-page" 
+        routerLinkActive="active" mat-button>
+          Add Order
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+
     
-    <button (click)="post()" mat-button>Add Order</button>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="companyName">
@@ -109,6 +119,14 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </form>
+</mat-card> -->
+<mat-card>
+  <router-outlet></router-outlet>
 </mat-card>
 
-<router-outlet></router-outlet>
+<mat-toolbar style="background:rgb(36, 35, 35);">
+  <div style="text-align: right;color:white;">
+    © COPYRIGHT Vishesh Patel.
+  </div>
+
+</mat-toolbar>
