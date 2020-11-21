@@ -1,0 +1,4 @@
+ng new Inventory(for creating a new project)
+ng serve(for running the code)
+ng build(make files ready for deploying)
+ng generate component add-order(for creating a new component)

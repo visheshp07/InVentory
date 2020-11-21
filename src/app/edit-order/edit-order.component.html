@@ -1,0 +1,73 @@
+<mat-card class="Rectangle110">
+    <form class="example-form">
+
+      <table style="width:100%">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="companyName" [(ngModel)]="orders.companyName" placeholder="Company Name">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="partNumber" [(ngModel)]="orders.partNumber" placeholder="Part Number">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="quantityOrder" [(ngModel)]="orders.quantityOrder" placeholder="Quantity Order">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="quantityMade" [(ngModel)]="orders.quantityMade" placeholder="Quantity Made">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="madeDate" [(ngModel)]="orders.madeDate" placeholder="Made Date">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="quantityScrap" [(ngModel)]="orders.quantityScrap" placeholder="Quantity Scrap">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="quantityShipped" [(ngModel)]="orders.quantityShipped" placeholder="Quantity Shipped">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="shippedDate" [(ngModel)]="orders.shippedDate" placeholder="Shipped Date">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="stock" [(ngModel)]="orders.stock" placeholder="Stock">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput name="location" [(ngModel)]="orders.location" placeholder="Location">
+            </mat-form-field>
+          </td>
+          <td>
+            <button (click)="updateRecord(element)" routerLink="/main-page" 
+            class="submitColor" mat-button>Update Order</button>
+          </td>
+          <td>
+            <button routerLink="/main-page" mat-button class="cancelOrder">Cancel</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card>
+  

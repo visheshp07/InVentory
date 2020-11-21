@@ -1,110 +1,13 @@
-<mat-toolbar color="primary">
-    <span>Application Title</span>
-    <!-- <span class="example-fill-remaining-space"></span>
-    <span>Home</span>
-    <span>About</span>
-    <span>Contact</span> -->
+<mat-toolbar color="primary" style="background:#067a40!important">
+    <span>InVentory</span>
 </mat-toolbar>
-
 <mat-card>
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput name="companyName" [(ngModel)]="orders.companyName" placeholder="Company Name">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="partNumber" [(ngModel)]="orders.partNumber" placeholder="Part Number">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="quantityOrder" [(ngModel)]="orders.quantityOrder" placeholder="Quantity Order">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="quantityMade" [(ngModel)]="orders.quantityMade" placeholder="Quantity Made">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="madeDate" [(ngModel)]="orders.madeDate" placeholder="Made Date">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="quantityScrap" [(ngModel)]="orders.quantityScrap" placeholder="Quantity Scrap">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="quantityShipped" [(ngModel)]="orders.quantityShipped" placeholder="Quantity Shipped">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="shippedDate" [(ngModel)]="orders.shippedDate" placeholder="Shipped Date">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="stock" [(ngModel)]="orders.stock" placeholder="Stock">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="location" [(ngModel)]="orders.location" placeholder="Location">
-    </mat-form-field>
-
-    <!-- <button (click)="post()" mat-button>Submit Order</button> -->
-    
-    <button (click)="post()" mat-button>Add Order</button>
-
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <ng-container matColumnDef="companyName">
-        <th mat-header-cell *matHeaderCellDef> Company Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
-      </ng-container>
-      <ng-container matColumnDef="partNumber">
-        <th mat-header-cell *matHeaderCellDef> Part Number </th>
-        <td mat-cell *matCellDef="let element"> {{element.partNumber}} </td>
-      </ng-container>
-      <ng-container matColumnDef="quantityOrder">
-        <th mat-header-cell *matHeaderCellDef> Quantity Order </th>
-        <td mat-cell *matCellDef="let element"> {{element.quantityOrder}} </td>
-      </ng-container>
-      <ng-container matColumnDef="quantityMade">
-        <th mat-header-cell *matHeaderCellDef> Quantity Made </th>
-        <td mat-cell *matCellDef="let element"> {{element.quantityMade}} </td>
-      </ng-container>
-      <ng-container matColumnDef="madeDate">
-        <th mat-header-cell *matHeaderCellDef> Made Date </th>
-        <td mat-cell *matCellDef="let element"> {{element.madeDate}} </td>
-      </ng-container>
-      <ng-container matColumnDef="quantityScrap">
-        <th mat-header-cell *matHeaderCellDef> Quantity Scrap </th>
-        <td mat-cell *matCellDef="let element"> {{element.quantityScrap}} </td>
-      </ng-container>
-      <ng-container matColumnDef="quantityShipped">
-        <th mat-header-cell *matHeaderCellDef> Quantity Shipped </th>
-        <td mat-cell *matCellDef="let element"> {{element.quantityShipped}} </td>
-      </ng-container>
-      <ng-container matColumnDef="shippedDate">
-        <th mat-header-cell *matHeaderCellDef> Shipped Date </th>
-        <td mat-cell *matCellDef="let element"> {{element.shippedDate}} </td>
-      </ng-container>
-      <ng-container matColumnDef="stock">
-        <th mat-header-cell *matHeaderCellDef> Stock </th>
-        <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
-      </ng-container>
-      <ng-container matColumnDef="location">
-        <th mat-header-cell *matHeaderCellDef> Location </th>
-        <td mat-cell *matCellDef="let element"> {{element.location}} </td>
-      </ng-container>
-      <ng-container matColumnDef="update">
-        <th mat-header-cell *matHeaderCellDef> Update </th>
-        <td mat-cell *matCellDef="let element"> 
-          <button (click)="updateRecord(element)" mat-button>
-            <i class="material-icons">edit</i>
-          </button>
-        </td>
-      </ng-container>
-      <ng-container matColumnDef="delete">
-        <th mat-header-cell *matHeaderCellDef> Delete </th>
-        <td mat-cell *matCellDef="let element"> 
-          <button (click)="deleteRecord(element)" mat-button>
-            <i class="material-icons">delete</i>
-          </button>
-        </td>
-      </ng-container>
-    
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  </form>
+  <router-outlet></router-outlet>
 </mat-card>
 
-<router-outlet></router-outlet>
+<mat-toolbar class="footer" >
+  <div>
+    © COPYRIGHT Vishesh Patel.
+  </div>
+
+</mat-toolbar>
