@@ -9,3 +9,22 @@
   table {
    width: 100%;
  }
+
+ .Rectangle110{
+  position: absolute;
+  width: 75%;
+  height: 520px;
+  left: 140px; 
+  top: 85px;
+  background: #FFFFFF;
+  box-shadow: 0px 2.86228px 11.4491px rgba(0, 0, 0, 0.25);
+  border-radius: 14.3114px;
+}
+
+.submitColor{
+  background: rgb(153, 207, 66);
+}
+
+.cancelOrder{
+  background: rgb(202, 79, 79);
+}

@@ -14,18 +14,24 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+// import {MatNativeDateModule} from '@angular/material/dq';
+
+
 
 
 
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AddOrderComponent } from './add-order/add-order.component';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    AddOrderComponent
+    AddOrderComponent,
+    EditOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,9 @@ import { AddOrderComponent } from './add-order/add-order.component';
     MatGridListModule,
     MatSidenavModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    // MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
