@@ -15,6 +15,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 // import {MatNativeDateModule} from '@angular/material/dq';
 
 
@@ -25,13 +26,15 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AddOrderComponent } from './add-order/add-order.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
+import { AddColumnComponent } from './add-column/add-column.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     AddOrderComponent,
-    EditOrderComponent
+    EditOrderComponent,
+    AddColumnComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,9 @@ import { EditOrderComponent } from './edit-order/edit-order.component';
     MatPaginatorModule,
     MatSortModule,
     MatDatepickerModule,
-    // MatNativeDateModule
+    MatSlideToggleModule
+    // MatNativeDateModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,3 +28,12 @@
 .cancelOrder{
   background: rgb(202, 79, 79);
 }
+
+.addColumn{
+  background: #067a40!important;
+  text-align: right;
+}
+
+.example-spacer {
+  flex: 10 10 auto;
+}

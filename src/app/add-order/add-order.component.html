@@ -4,7 +4,8 @@
       <tr>
         <td>
           <mat-form-field class="example-full-width;">
-            <input matInput name="companyName" [(ngModel)]="orders.companyName" placeholder="Company Name">
+            <input matInput name="companyName" [(ngModel)]="orders.companyName" 
+            maxlength="50" placeholder="Company Name" required>
           </mat-form-field>
         </td>
         <td>
@@ -59,7 +60,7 @@
           </mat-form-field>
         </td>
         <td> 
-          <button (click)="post()" routerLink="/main-page" 
+          <button (click)="post()" routerLink="/main-page" type="submit"
           mat-button class="submitColor">Submit Order</button>
         </td>
         <td><button routerLink="/main-page" mat-button class="cancelOrder">Cancel</button></td>

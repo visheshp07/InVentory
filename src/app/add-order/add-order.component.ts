@@ -30,7 +30,7 @@ export class AddOrderComponent implements OnInit {
     console.log(this.orders)
     this.http.post('http://localhost:3000/api/order', {orders: this.orders}).toPromise()
     .then((result) => {
-      // this.router.navigateByUrl("/main-page");
+      this.router.navigateByUrl("/main-page");
       console.log(result);
     });
   }

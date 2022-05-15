@@ -6,7 +6,7 @@
         <input matInput (keyup)="applyFilter($event)" placeholder="Search">
       </mat-form-field>
 
-        <button style="background:rgb(153, 207, 66);float: right;margin-top: 13px;"
+        <button style="background:rgb(132 207 12);float: right;margin-top: 13px;color: white;"
         (click)="post()" routerLink="/add-order" routerLinkActive="active" mat-button>
           Add Order
         </button>
@@ -17,10 +17,10 @@
   <div class="mat-elevation-z8">
 
   <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="position">
+    <!-- <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef > Position </th>
       <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="companyName">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Company Name </th>
@@ -67,7 +67,7 @@
       <th mat-header-cell *matHeaderCellDef> Update </th>
       <td mat-cell *matCellDef="let element">
       <!-- <app-edit-order [master]='master'> -->
-        <button (click)="updateRecord(element)" mat-button>
+        <button (click)="updateRecord(element)" style="margin-left: -12px;" mat-button>
           <i class="material-icons" style="color: rgb(153, 207, 66)">edit</i>
         </button>
       <!-- </app-edit-order> -->
@@ -76,7 +76,7 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef > Delete </th>
       <td mat-cell *matCellDef="let element">
-        <button (click)="deleteRecord(element)" mat-button>
+        <button (click)="deleteRecord(element)" style="margin-left: -12px;" mat-button>
           <i class="material-icons" style="color: rgb(202, 79, 79);">delete</i>
         </button>
       </td>
@@ -85,7 +85,10 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <mat-paginator style="margin-bottom: 80px;" [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+  <mat-paginator style="margin-bottom: 80px;" [pageSizeOptions]="[10, 25, 50, 100]" 
+  [length]=[recordsLength] showFirstLastButtons></mat-paginator>
+
+
 </div>
 </form>
 
